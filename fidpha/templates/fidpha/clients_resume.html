@@ -1,0 +1,43 @@
+{% extends "fidpha/base.html" %}
+
+{% block title %}
+Clients résumé
+{% endblock %}
+
+{% block content %}
+
+<h1>Clients resume</h1>
+
+{% for client in clients %}
+
+    <h2>{{ client.client_name }}</h2>
+
+    {% for contract in client.contracts.all %}
+
+        <h3>Contract : {{ contract.contract_number }}</h3>
+
+        <table border="1">
+            <tr>
+                <th>Product</th>
+                <th>Factor</th>
+                <th>Threshold</th>
+            </tr>
+
+            {% for rule in contract.contractproduct_set.all %}
+            <tr>
+                <td>{{ rule.product.product_name }}</td>
+                <td>{{ rule.factor }}</td>
+                <td>{{ rule.amount_threshold }}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    {% endfor %}
+
+{% endfor %}
+
+
+
+
+{% endblock %}

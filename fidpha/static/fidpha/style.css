@@ -1,0 +1,214 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+nav {
+    padding: 15px 30px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d8bd2e;
+    border-bottom: 3px solid #ffffff;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #af711d;
+}
+
+nav form button {
+    background: none;
+    border: none;
+    color: #1b679b;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+nav form button:hover {
+    text-decoration: underline;
+    color: #af711d;
+}
+
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #1b679b;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e6f0ff;
+}
+
+
+h2 {
+    color: #1b679b;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+a {
+    transition: color 0.2s;
+}
+
+
+
+
+
+/* Login page container */
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Heading */
+.login-container h2 {
+    color: #1b679b;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+.login-form input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Button */
+.login-form button {
+    width: 95%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #000000;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #af711d;
+}
+
+/* Messages */
+.messages {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.messages li {
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.messages li.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.messages li.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsive for screens smaller than 600px (phones) */
+@media only screen and (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        margin: 40px auto; /* less top margin */
+        padding: 20px;
+    }
+
+    .login-form input, .login-form button {
+        width: 100%; /* make inputs and button full width */
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    table, th, td {
+        font-size: 0.9rem; /* smaller font in tables */
+    }
+}
+
+/* Dashboard cards */
+@media only screen and (max-width: 600px) {
+    .card {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}

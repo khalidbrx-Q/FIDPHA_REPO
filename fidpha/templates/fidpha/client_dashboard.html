@@ -1,0 +1,11 @@
+{% extends "fidpha/base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <h2>{{ client.client_name | upper}}</h2>
+        <p>Total points: {{ total_points|floatformat:2 }}</p>
+    </div>
+</div>
+
+{% endblock %}
